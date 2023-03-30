@@ -6,6 +6,12 @@ using System.Windows.Forms;
 
 namespace MarieSelbyProject
 {
+    public static class Globals
+    {
+        public const string connectionString = "Data Source=AJ-DESKTOP;Initial Catalog=MS_GARDENS;Integrated Security=True";
+        public const string assetsFolder = "..\\..\\Assets\\";
+        public const string exhibitsFolder = "Exhibits\\";
+    }
     internal static class Program
     {
         /// <summary>

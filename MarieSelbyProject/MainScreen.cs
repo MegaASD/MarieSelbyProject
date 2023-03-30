@@ -8,14 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace MarieSelbyProject
 {
     public partial class MainScreen : Form
     {
-        const string connectionString = "Data Source=AJ-DESKTOP;Initial Catalog=MS_GARDENS;Integrated Security=True";
-        const string assetsFolder = "..\\..\\Assets\\";
-        const string exhibitsFolder = "Exhibits\\";
-
         public MainScreen()
         {
             InitializeComponent();
@@ -33,7 +30,7 @@ namespace MarieSelbyProject
         {
             // TODO: This line of code loads data into the 'mS_GARDENSDataSet.EXHIBIT' table. You can move, or remove it, as needed.
             this.eXHIBITTableAdapter.Fill(this.mS_GARDENSDataSet.EXHIBIT);
-            SqlConnection connection = new SqlConnection(connectionString);
+            SqlConnection connection = new SqlConnection(Globals.connectionString);
             connection.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM EXHIBIT", connection);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -79,24 +76,35 @@ namespace MarieSelbyProject
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void exhibit1Pic_Click(object sender, EventArgs e)
         {
-
+            showExhibit();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void exhibit2Pic_Click(object sender, EventArgs e)
         {
-
+            showExhibit();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void exhibit3Pic_Click(object sender, EventArgs e)
         {
-
+            showExhibit();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void exhibit4Pic_Click(object sender, EventArgs e)
         {
+            showExhibit();
+        }
 
+        private void exhibit5Pic_Click(object sender, EventArgs e)
+        {
+            showExhibit();
+        }
+
+        private void showExhibit()
+        {
+            Form exhibit = new Exhibit();
+            exhibit.Show();
         }
     }
 }

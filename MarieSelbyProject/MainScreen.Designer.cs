@@ -39,6 +39,7 @@
             this.exhibit1Label = new System.Windows.Forms.Label();
             this.exhibit1Pic = new System.Windows.Forms.PictureBox();
             this.exhibit1Txt = new System.Windows.Forms.TextBox();
+            this.eXHIBITBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.exhibit4Txt = new System.Windows.Forms.TextBox();
             this.exhibit3Txt = new System.Windows.Forms.TextBox();
             this.exhibit3Label = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             this.mainScreenMenu = new System.Windows.Forms.MenuStrip();
             this.mainScreenMenu_File = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.mainScreenMenu_File_Admin = new System.Windows.Forms.ToolStripMenuItem();
             this.mainScreenMenu_File_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.mainScreenMenu_Help = new System.Windows.Forms.ToolStripMenuItem();
             this.mainScreenMenu_Help_Contents = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,18 +63,16 @@
             this.mainScreenMenu_Help_Search = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.mainScreenMenu_Help_About = new System.Windows.Forms.ToolStripMenuItem();
-            this.mainScreenMenu_File_Admin = new System.Windows.Forms.ToolStripMenuItem();
-            this.eXHIBITBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             ((System.ComponentModel.ISupportInitialize)(this.mS_GARDENSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eXHIBITBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exhibit4Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exhibit1Pic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eXHIBITBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exhibit3Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exhibit2Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exhibit5Pic)).BeginInit();
             this.mainScreenMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eXHIBITBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // mS_GARDENSDataSet
@@ -107,6 +107,7 @@
             this.exhibit4Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.exhibit4Pic.TabIndex = 1;
             this.exhibit4Pic.TabStop = false;
+            this.exhibit4Pic.Click += new System.EventHandler(this.exhibit4Pic_Click);
             // 
             // exhibit4Label
             // 
@@ -137,6 +138,7 @@
             this.exhibit1Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.exhibit1Pic.TabIndex = 4;
             this.exhibit1Pic.TabStop = false;
+            this.exhibit1Pic.Click += new System.EventHandler(this.exhibit1Pic_Click);
             // 
             // exhibit1Txt
             // 
@@ -149,7 +151,11 @@
             this.exhibit1Txt.ReadOnly = true;
             this.exhibit1Txt.Size = new System.Drawing.Size(167, 132);
             this.exhibit1Txt.TabIndex = 6;
-            this.exhibit1Txt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // eXHIBITBindingSource1
+            // 
+            this.eXHIBITBindingSource1.DataMember = "EXHIBIT";
+            this.eXHIBITBindingSource1.DataSource = this.mS_GARDENSDataSet;
             // 
             // exhibit4Txt
             // 
@@ -193,6 +199,7 @@
             this.exhibit3Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.exhibit3Pic.TabIndex = 16;
             this.exhibit3Pic.TabStop = false;
+            this.exhibit3Pic.Click += new System.EventHandler(this.exhibit3Pic_Click);
             // 
             // exhibit5Txt
             // 
@@ -236,6 +243,7 @@
             this.exhibit2Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.exhibit2Pic.TabIndex = 22;
             this.exhibit2Pic.TabStop = false;
+            this.exhibit2Pic.Click += new System.EventHandler(this.exhibit2Pic_Click);
             // 
             // exhibit5Label
             // 
@@ -257,6 +265,7 @@
             this.exhibit5Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.exhibit5Pic.TabIndex = 20;
             this.exhibit5Pic.TabStop = false;
+            this.exhibit5Pic.Click += new System.EventHandler(this.exhibit5Pic_Click);
             // 
             // titleLabel
             // 
@@ -267,7 +276,6 @@
             this.titleLabel.Size = new System.Drawing.Size(916, 73);
             this.titleLabel.TabIndex = 26;
             this.titleLabel.Text = "Marie Selby Botanical Gardens";
-            this.titleLabel.Click += new System.EventHandler(this.label7_Click);
             // 
             // selectExhibitLabel
             // 
@@ -278,7 +286,6 @@
             this.selectExhibitLabel.Size = new System.Drawing.Size(397, 39);
             this.selectExhibitLabel.TabIndex = 27;
             this.selectExhibitLabel.Text = "Select an Exhibit to View";
-            this.selectExhibitLabel.Click += new System.EventHandler(this.label8_Click);
             // 
             // mainScreenMenu
             // 
@@ -305,6 +312,12 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // mainScreenMenu_File_Admin
+            // 
+            this.mainScreenMenu_File_Admin.Name = "mainScreenMenu_File_Admin";
+            this.mainScreenMenu_File_Admin.Size = new System.Drawing.Size(180, 22);
+            this.mainScreenMenu_File_Admin.Text = "Admin Login";
             // 
             // mainScreenMenu_File_Exit
             // 
@@ -353,17 +366,6 @@
             this.mainScreenMenu_Help_About.Size = new System.Drawing.Size(180, 22);
             this.mainScreenMenu_Help_About.Text = "&About...";
             // 
-            // mainScreenMenu_File_Admin
-            // 
-            this.mainScreenMenu_File_Admin.Name = "mainScreenMenu_File_Admin";
-            this.mainScreenMenu_File_Admin.Size = new System.Drawing.Size(180, 22);
-            this.mainScreenMenu_File_Admin.Text = "Admin Login";
-            // 
-            // eXHIBITBindingSource1
-            // 
-            this.eXHIBITBindingSource1.DataMember = "EXHIBIT";
-            this.eXHIBITBindingSource1.DataSource = this.mS_GARDENSDataSet;
-            // 
             // statusStrip1
             // 
             this.statusStrip1.Location = new System.Drawing.Point(0, 522);
@@ -408,12 +410,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.eXHIBITBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exhibit4Pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exhibit1Pic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eXHIBITBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exhibit3Pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exhibit2Pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exhibit5Pic)).EndInit();
             this.mainScreenMenu.ResumeLayout(false);
             this.mainScreenMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eXHIBITBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

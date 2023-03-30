@@ -1,0 +1,2 @@
+Database Connection String
+Data Source=AJ-DESKTOP;Initial Catalog=MS_GARDENS;Integrated Security=True

@@ -311,18 +311,18 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(140, 6);
             // 
             // mainScreenMenu_File_Admin
             // 
             this.mainScreenMenu_File_Admin.Name = "mainScreenMenu_File_Admin";
-            this.mainScreenMenu_File_Admin.Size = new System.Drawing.Size(180, 22);
+            this.mainScreenMenu_File_Admin.Size = new System.Drawing.Size(143, 22);
             this.mainScreenMenu_File_Admin.Text = "Admin Login";
             // 
             // mainScreenMenu_File_Exit
             // 
             this.mainScreenMenu_File_Exit.Name = "mainScreenMenu_File_Exit";
-            this.mainScreenMenu_File_Exit.Size = new System.Drawing.Size(180, 22);
+            this.mainScreenMenu_File_Exit.Size = new System.Drawing.Size(143, 22);
             this.mainScreenMenu_File_Exit.Text = "E&xit";
             // 
             // mainScreenMenu_Help
@@ -340,30 +340,30 @@
             // mainScreenMenu_Help_Contents
             // 
             this.mainScreenMenu_Help_Contents.Name = "mainScreenMenu_Help_Contents";
-            this.mainScreenMenu_Help_Contents.Size = new System.Drawing.Size(180, 22);
+            this.mainScreenMenu_Help_Contents.Size = new System.Drawing.Size(122, 22);
             this.mainScreenMenu_Help_Contents.Text = "&Contents";
             // 
             // mainScreenMenu_Help_Index
             // 
             this.mainScreenMenu_Help_Index.Name = "mainScreenMenu_Help_Index";
-            this.mainScreenMenu_Help_Index.Size = new System.Drawing.Size(180, 22);
+            this.mainScreenMenu_Help_Index.Size = new System.Drawing.Size(122, 22);
             this.mainScreenMenu_Help_Index.Text = "&Index";
             // 
             // mainScreenMenu_Help_Search
             // 
             this.mainScreenMenu_Help_Search.Name = "mainScreenMenu_Help_Search";
-            this.mainScreenMenu_Help_Search.Size = new System.Drawing.Size(180, 22);
+            this.mainScreenMenu_Help_Search.Size = new System.Drawing.Size(122, 22);
             this.mainScreenMenu_Help_Search.Text = "&Search";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(119, 6);
             // 
             // mainScreenMenu_Help_About
             // 
             this.mainScreenMenu_Help_About.Name = "mainScreenMenu_Help_About";
-            this.mainScreenMenu_Help_About.Size = new System.Drawing.Size(180, 22);
+            this.mainScreenMenu_Help_About.Size = new System.Drawing.Size(122, 22);
             this.mainScreenMenu_Help_About.Text = "&About...";
             // 
             // statusStrip1

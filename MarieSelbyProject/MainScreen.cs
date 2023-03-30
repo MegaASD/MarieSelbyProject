@@ -13,6 +13,7 @@ namespace MarieSelbyProject
 {
     public partial class MainScreen : Form
     {
+        string id = "";
         public MainScreen()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace MarieSelbyProject
         private void MainScreen_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'mS_GARDENSDataSet.EXHIBIT' table. You can move, or remove it, as needed.
-            this.eXHIBITTableAdapter.Fill(this.mS_GARDENSDataSet.EXHIBIT);
+            //this.eXHIBITTableAdapter.Fill(this.mS_GARDENSDataSet.EXHIBIT);
             SqlConnection connection = new SqlConnection(Globals.connectionString);
             connection.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM EXHIBIT", connection);
@@ -78,32 +79,36 @@ namespace MarieSelbyProject
 
         private void exhibit1Pic_Click(object sender, EventArgs e)
         {
-            showExhibit();
+            showExhibit("1", exhibit1Label.Text);
+
         }
 
         private void exhibit2Pic_Click(object sender, EventArgs e)
         {
-            showExhibit();
+            showExhibit("2", exhibit2Label.Text);
         }
 
         private void exhibit3Pic_Click(object sender, EventArgs e)
         {
-            showExhibit();
+            showExhibit("3", exhibit3Label.Text);
         }
 
         private void exhibit4Pic_Click(object sender, EventArgs e)
         {
-            showExhibit();
+            showExhibit("4", exhibit4Label.Text);
         }
 
         private void exhibit5Pic_Click(object sender, EventArgs e)
         {
-            showExhibit();
+            showExhibit("5", exhibit5Label.Text);
         }
 
-        private void showExhibit()
+        private void showExhibit(string idIn, string textIn)
         {
+            
             Form exhibit = new Exhibit();
+            exhibit.Name = idIn;
+            exhibit.Text = textIn;
             exhibit.Show();
         }
     }

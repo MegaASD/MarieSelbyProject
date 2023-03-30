@@ -311,18 +311,19 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(140, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // mainScreenMenu_File_Admin
             // 
             this.mainScreenMenu_File_Admin.Name = "mainScreenMenu_File_Admin";
-            this.mainScreenMenu_File_Admin.Size = new System.Drawing.Size(143, 22);
+            this.mainScreenMenu_File_Admin.Size = new System.Drawing.Size(180, 22);
             this.mainScreenMenu_File_Admin.Text = "Admin Login";
+            this.mainScreenMenu_File_Admin.Click += new System.EventHandler(this.mainScreenMenu_File_Admin_Click);
             // 
             // mainScreenMenu_File_Exit
             // 
             this.mainScreenMenu_File_Exit.Name = "mainScreenMenu_File_Exit";
-            this.mainScreenMenu_File_Exit.Size = new System.Drawing.Size(143, 22);
+            this.mainScreenMenu_File_Exit.Size = new System.Drawing.Size(180, 22);
             this.mainScreenMenu_File_Exit.Text = "E&xit";
             // 
             // mainScreenMenu_Help

@@ -13,7 +13,7 @@ namespace MarieSelbyProject
 {
     public partial class MainScreen : Form
     {
-        string id = "";
+        public static bool admin = false;
         public MainScreen()
         {
             InitializeComponent();
@@ -110,6 +110,12 @@ namespace MarieSelbyProject
             exhibit.Name = idIn;
             exhibit.Text = textIn;
             exhibit.Show();
+        }
+
+        private void mainScreenMenu_File_Admin_Click(object sender, EventArgs e)
+        {
+            Form login = new Login();
+            login.Show();
         }
     }
 }

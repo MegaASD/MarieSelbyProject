@@ -23,6 +23,10 @@ namespace MarieSelbyProject
             {
                 MainScreen.admin = true;
                 this.Close();
+                Form admin = new AdminScreen();
+                MainScreen.ActiveForm.Hide();
+                admin.Show();
+
                 return;
             }
             else

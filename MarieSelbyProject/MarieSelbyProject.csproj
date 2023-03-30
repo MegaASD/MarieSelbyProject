@@ -53,6 +53,18 @@
     <Compile Include="Exhibit.Designer.cs">
       <DependentUpon>Exhibit.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminScreen.Designer.cs">
+      <DependentUpon>AdminScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExhibitEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExhibitEdit.Designer.cs">
+      <DependentUpon>ExhibitEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +86,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Exhibit.resx">
       <DependentUpon>Exhibit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminScreen.resx">
+      <DependentUpon>AdminScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExhibitEdit.resx">
+      <DependentUpon>ExhibitEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

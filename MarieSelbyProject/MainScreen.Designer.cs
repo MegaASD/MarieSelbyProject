@@ -63,7 +63,8 @@
             this.mainScreenMenu_Help_Search = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.mainScreenMenu_Help_About = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.status = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.mS_GARDENSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eXHIBITBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exhibit4Pic)).BeginInit();
@@ -73,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.exhibit2Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exhibit5Pic)).BeginInit();
             this.mainScreenMenu.SuspendLayout();
+            this.status.SuspendLayout();
             this.SuspendLayout();
             // 
             // mS_GARDENSDataSet
@@ -311,19 +313,19 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(140, 6);
             // 
             // mainScreenMenu_File_Admin
             // 
             this.mainScreenMenu_File_Admin.Name = "mainScreenMenu_File_Admin";
-            this.mainScreenMenu_File_Admin.Size = new System.Drawing.Size(180, 22);
+            this.mainScreenMenu_File_Admin.Size = new System.Drawing.Size(143, 22);
             this.mainScreenMenu_File_Admin.Text = "Admin Login";
             this.mainScreenMenu_File_Admin.Click += new System.EventHandler(this.mainScreenMenu_File_Admin_Click);
             // 
             // mainScreenMenu_File_Exit
             // 
             this.mainScreenMenu_File_Exit.Name = "mainScreenMenu_File_Exit";
-            this.mainScreenMenu_File_Exit.Size = new System.Drawing.Size(180, 22);
+            this.mainScreenMenu_File_Exit.Size = new System.Drawing.Size(143, 22);
             this.mainScreenMenu_File_Exit.Text = "E&xit";
             this.mainScreenMenu_File_Exit.Click += new System.EventHandler(this.mainScreenMenu_File_Exit_Click);
             // 
@@ -368,20 +370,29 @@
             this.mainScreenMenu_Help_About.Size = new System.Drawing.Size(122, 22);
             this.mainScreenMenu_Help_About.Text = "&About...";
             // 
-            // statusStrip1
+            // status
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 522);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1203, 22);
-            this.statusStrip1.TabIndex = 29;
-            this.statusStrip1.Text = "statusStrip1";
+            this.status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.status.Location = new System.Drawing.Point(0, 522);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(1203, 22);
+            this.status.TabIndex = 29;
+            this.status.Text = "status";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.RightToLeftAutoMirrorImage = true;
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(68, 17);
+            this.toolStripStatusLabel1.Text = "Welcome!~";
             // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1203, 544);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.status);
             this.Controls.Add(this.selectExhibitLabel);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.exhibit5Txt);
@@ -418,6 +429,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.exhibit5Pic)).EndInit();
             this.mainScreenMenu.ResumeLayout(false);
             this.mainScreenMenu.PerformLayout();
+            this.status.ResumeLayout(false);
+            this.status.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,7 +471,8 @@
         private System.Windows.Forms.ToolStripMenuItem mainScreenMenu_Help_About;
         private System.Windows.Forms.ToolStripMenuItem mainScreenMenu_File_Admin;
         private System.Windows.Forms.BindingSource eXHIBITBindingSource1;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip status;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 

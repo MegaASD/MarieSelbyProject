@@ -117,5 +117,10 @@ namespace MarieSelbyProject
             Form login = new Login();
             login.Show();
         }
+
+        private void mainScreenMenu_File_Exit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

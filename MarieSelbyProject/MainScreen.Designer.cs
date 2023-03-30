@@ -325,6 +325,7 @@
             this.mainScreenMenu_File_Exit.Name = "mainScreenMenu_File_Exit";
             this.mainScreenMenu_File_Exit.Size = new System.Drawing.Size(180, 22);
             this.mainScreenMenu_File_Exit.Text = "E&xit";
+            this.mainScreenMenu_File_Exit.Click += new System.EventHandler(this.mainScreenMenu_File_Exit_Click);
             // 
             // mainScreenMenu_Help
             // 
